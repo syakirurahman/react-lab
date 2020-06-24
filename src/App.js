@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'assets/scss/bootstrap/bootstrap-grid.scss';
+import 'assets/scss/default.scss';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Home from 'pages/Home';
+import Datepickers from 'pages/Datepickers';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="react-lab-app">
+      <Router>
+        <Route exact component={Home} path="/"/>
+        <Route component={Datepickers} path="/datepickers"/>
+      </Router>
     </div>
   );
 }

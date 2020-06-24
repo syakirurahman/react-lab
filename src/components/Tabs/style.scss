@@ -1,0 +1,15 @@
+@import 'assets/scss/variables.scss';
+
+.app-tabs {
+  margin: 10px auto 50px;
+  a {
+    margin:3px;
+    background:#fff;
+    padding:5px 10px;
+    text-decoration: none;
+    &:hover, &.active {
+      background-color: $devOrange;
+      color:#fff;
+    }
+  }
+}

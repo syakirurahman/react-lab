@@ -1,0 +1,13 @@
+/* Variables
+========================================================================== */
+
+$devblue:#0DA3FA;
+$devOrange:#FC8833;
+$blackBlue:#00142a;
+$greyBlue: #607d8b;
+$greyBlueFaded: #EDF5F8;
+$textColor: #33445d;
+
+@mixin little-fade-shadowed {
+  box-shadow:rgba($blackBlue,0.1) 0px 20px 50px -20px;
+}
