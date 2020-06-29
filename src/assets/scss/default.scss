@@ -129,8 +129,10 @@ table {
 }
 
 .page-container {
+  padding-top:50px;
+  padding-bottom:50px;
   .page-header {
-    margin:50px auto 30px;
+    margin:0 auto 30px;
     max-width: 675px;
     h1.page-title {
       line-height: 1.3;

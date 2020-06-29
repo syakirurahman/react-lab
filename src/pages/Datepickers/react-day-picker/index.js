@@ -8,7 +8,7 @@ export default function ReactDayPicker() {
       <div className="section">
         <h3 className="section-title">Basic Date Input</h3>
         <div className="section-content">
-        <DayPicker />
+        <DayPicker/>
         </div>
       </div>
     </div>

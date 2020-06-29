@@ -29,8 +29,8 @@ export default function Datepickers(props) {
 
   return (
     <div>
-      <Header postUrl="https://www.devaradise.com/react-datepicker-tutorial"/>
-
+      {/* <Header postUrl="https://www.devaradise.com/react-datepicker-tutorial"/> */}
+      <Header/>
       <div className="page-container container text-center">
         <div className="page-header">
           <h1 className="page-title">React - Datepicker Examples<br/> with Top 3 Datepicker Libraries</h1>
