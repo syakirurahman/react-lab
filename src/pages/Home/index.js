@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from 'layouts/Header'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import 'pages/Home/style.scss';
 
