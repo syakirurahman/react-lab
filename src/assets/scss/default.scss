@@ -43,7 +43,7 @@ img {
   max-width: 100%!important;
   height:auto;
 }
-input[type="text"], input[type="email"], input[type="search"], input[type="url"], textarea, select {
+input:not([type="checkbox"]), input[type="text"], input[type="email"], input[type="search"], input[type="url"], textarea, select {
   display: block;
   height: calc(1.5em + .75rem + 2px);
   padding: .375rem .75rem;
@@ -86,6 +86,15 @@ button, input[type="submit"] {
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.btn-submit {
+  background-color: $greyBlue;
+  color:#fff;
+  &:hover {
+    background-color: $devBlue;
+  }
+}
+
 table {
   width:100%;
   th, td {
@@ -129,7 +138,7 @@ table {
 }
 
 .page-container {
-  padding-top:50px;
+  padding-top:120px;
   padding-bottom:50px;
   .page-header {
     margin:0 auto 30px;
@@ -151,6 +160,10 @@ table {
     }
     .section {
       text-align: left;
+      margin-bottom: 30px;
+      h3.section-title {
+        margin:15px 0;
+      }
     }
   }
 }

@@ -6,6 +6,11 @@
   border-bottom: 3px solid #fff;
   text-align: center;
   color:#fff;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 999;
   @include little-fade-shadowed();
   .navigation {
     position: absolute;
@@ -36,6 +41,7 @@
     display: block;
   }
   &.is-home {
+    position: relative;
     padding-top: 50px;
     padding-bottom: 30px;
   }
