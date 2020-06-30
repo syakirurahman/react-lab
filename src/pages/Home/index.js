@@ -7,8 +7,11 @@ import 'pages/Home/style.scss';
 export default function Home() {
   return (
     <div>
+      <Helmet>
+        <title>React Lab - React UI Component Experiments</title>
+        <meta name="description" content="React Lab - React UI Component Experiments by Syakir Rahman" />
+      </Helmet>
       <Header isHome></Header>
-      
       <div className="container experiments">
         <div className="row">
           <div className="col-md-4">
