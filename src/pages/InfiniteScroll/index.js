@@ -19,12 +19,7 @@ export default function InfiniteScroll(props) {
 
   return (
     <div>
-      <Helmet>
-        <title>React - Infinite Scroll Examples with no Library</title>
-        <meta name="description" content="React - Infinite Scroll Examples with and without Libraries to help you decide what is best for your application." />
-      </Helmet>
-      <Header/>
-      {/* <Header postUrl="https://www.devaradise.com/react-datepicker-tutorial"/> */}
+      <Header postUrl="https://www.devaradise.com/react-infinite-scroll-tutorial"/>
       <div className="page-container container text-center">
         <div className="page-header">
           <h1 className="page-title">React - Infinite Scroll Examples<br/> with no library</h1>

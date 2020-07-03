@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Helmet } from 'react-helmet';
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -29,11 +28,7 @@ export default function ReactDatepicker() {
 
   return (
     <div>
-      <Helmet>
-        <title>React - Datepicker Examples with react-datepicker library</title>
-        <meta name="description" content="React - Datepicker Examples with react-datepicker library" />
-      </Helmet>
-
+      
       <form method="post" onSubmit={handleSubmit}>
         <div className="section">
           <h3 className="section-title">Basic Date Input</h3>

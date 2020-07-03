@@ -2,7 +2,6 @@ import React from 'react'
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
 import { Route, Switch } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 
 import ReactDatepicker from './react-datepicker'
 import ReactDayPicker from './react-day-picker'
@@ -25,10 +24,7 @@ export default function Datepickers(props) {
 
   return (
     <div>
-      <Helmet>
-        <title>React - Datepicker Examples with Top 2 Datepicker Libraries</title>
-        <meta name="description" content="React datepicker examples with 2 different libraries to help you decide what is best for your application." />
-      </Helmet>
+
       <Header postUrl="https://www.devaradise.com/react-datepicker-tutorial"/>
       <div className="page-container container text-center">
         <div className="page-header">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 import DayPicker, { DateUtils } from "react-day-picker";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 
@@ -12,15 +11,10 @@ export default function ReactDayPicker() {
   const [from, setFrom] = useState(undefined);
   const [to, setTo] = useState(undefined);
 
+  const [basicInputDate, setBasicInputDate] = useState(new Date());
+
   return (
     <div className="react-day-picker">
-      <Helmet>
-        <title>React - Datepicker Examples with react-day-picker library</title>
-        <meta
-          name="description"
-          content="React - Datepicker Examples with react-day-picker library"
-        />
-      </Helmet>
 
       <div className="section">
         <h3 className="section-title">Basic Calendar</h3>
@@ -39,7 +33,6 @@ export default function ReactDayPicker() {
         <h3 className="section-title">Calendar - Date Range Input</h3>
         <div className="section-content">
         <DayPicker
-          className="Selectable"
           numberOfMonths={2}
           selectedDays={[from, { from, to }]}
           onDayClick={(date) => {
@@ -54,7 +47,10 @@ export default function ReactDayPicker() {
       <div className="section">
         <h3 className="section-title">Basic Date Input</h3>
         <div className="section-content">
-          <DayPickerInput onDayChange={(day) => console.log(day)} />
+          <DayPickerInput 
+            onDayChange={(day) => setBasicInputDate(day)} 
+            value={basicInputDate}
+          />
         </div>
       </div>
 

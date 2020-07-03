@@ -1,17 +1,12 @@
 import React from 'react'
 import Header from 'layouts/Header'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 
 import 'pages/Home/style.scss';
 
 export default function Home() {
   return (
     <div>
-      <Helmet>
-        <title>React Lab - React UI Component Experiments</title>
-        <meta name="description" content="React Lab - React UI Component Experiments, Study case, react library usage & tutorial by Syakir Rahman" />
-      </Helmet>
       <Header isHome></Header>
       <div className="container experiments">
         <div className="row">
