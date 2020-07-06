@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet';
 import UserService from 'services/UserService';
-import './style.scss'
-
 
 export default function InfiniteScrollNoLibrary() {
 
@@ -48,10 +45,6 @@ export default function InfiniteScrollNoLibrary() {
 
   return (
     <div>
-      <Helmet>
-        <title>React - Datepicker Examples with react-datepicker library</title>
-        <meta name="description" content="React - Datepicker Examples with react-datepicker library" />
-      </Helmet>
 
       <div className="section">
 
@@ -60,9 +53,9 @@ export default function InfiniteScrollNoLibrary() {
           <div className="box m-3 user" key={i}>
             <img src={user.avatar} alt={user.first_name}/>
             <div className="user-details">
-              email: {user.email}<br/> 
-              first_name: {user.first_name}<br/> 
-              last_name: {user.first_name}<br/>
+              <strong>Email</strong>: {user.email}<br/> 
+              <strong>First Name</strong>: {user.first_name}<br/> 
+              <strong>Last Name</strong>: {user.last_name}<br/>
             </div>
           </div>
           )
