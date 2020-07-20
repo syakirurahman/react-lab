@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from 'pages/Home';
 import Datepickers from 'pages/Datepickers';
 import InfiniteScroll from 'pages/InfiniteScroll';
+import ReactTabs from 'pages/ReactTabs';
 
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
     <div className="react-lab-app">
       <Router>
         <Route exact component={Home} path="/"/>
-        <Route component={Datepickers} path="/datepickers"/>
+        <Route component={ReactTabs} path="/react-tabs"/>
         <Route component={InfiniteScroll} path="/infinite-scroll"/>
+        <Route component={Datepickers} path="/datepickers"/>
       </Router>
     </div>
   );

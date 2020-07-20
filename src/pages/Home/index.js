@@ -10,14 +10,18 @@ export default function Home() {
       <Header isHome></Header>
       <div className="container experiments">
         <div className="row">
+
+          {/* React Tabs */}
           <div className="col-md-4">
             <div className="box experiment">
               <div className="experiment-thumb">
-                <img src={require("assets/images/undraw_date_picker_gorr.png")} alt="React Datepicker Examples"/>
+                <img src={require("assets/images/undraw_tabs_jf82.png")} alt="React Tabs"/>
               </div>
-              <h2 className="experiment-title"><Link to="/datepickers">React Datepicker Examples</Link></h2>
+              <h2 className="experiment-title"><Link to="/react-tabs">React Tabs</Link></h2>
             </div>
           </div>
+
+          {/* React Infinite Scroll */}
           <div className="col-md-4">
             <div className="box experiment">
               <div className="experiment-thumb">
@@ -26,6 +30,17 @@ export default function Home() {
               <h2 className="experiment-title"><Link to="/infinite-scroll">React Infinite Scroll</Link></h2>
             </div>
           </div>
+
+          {/* React Datepicker */}
+          <div className="col-md-4">
+            <div className="box experiment">
+              <div className="experiment-thumb">
+                <img src={require("assets/images/undraw_date_picker_gorr.png")} alt="React Datepicker Examples"/>
+              </div>
+              <h2 className="experiment-title"><Link to="/datepickers">React Datepicker Examples</Link></h2>
+            </div>
+          </div>
+
         </div>
       </div>
 
