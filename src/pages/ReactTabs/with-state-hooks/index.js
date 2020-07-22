@@ -52,12 +52,11 @@ export default function WithStateHooks() {
       <div className="tabs">
         {
           tabList.map((tab) => (
-            // eslint-disable-next-line
-            <a href="#" 
+            <button 
               onClick={(event) => handleTab(event, tab.name)} 
               className={(tab.name === currentTab) ? 'active' : ''}>
                 {tab.label}
-            </a>
+            </button>
           ))
         }
       </div>
