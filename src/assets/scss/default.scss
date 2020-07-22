@@ -14,7 +14,7 @@ body {
   background-color: $greyBlueFaded;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.5;
   color: $textColor;
   @media(max-width: 576px) {
 //    font-size:14px;
@@ -27,7 +27,8 @@ a:hover {
   color:$devOrange
 }
 p {
-  margin-bottom:25px;
+  margin-top: 0;
+  margin-bottom:15px;
   a {
     text-decoration: underline;
   }

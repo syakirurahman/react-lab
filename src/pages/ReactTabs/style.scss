@@ -1,0 +1,30 @@
+.react-tabs {
+  width:100%;
+  .page-content {
+    text-align: left;
+  }
+  .tabs {
+    >a {
+      display: inline-block;
+      padding:7px 15px;
+      background-color: #fff;
+      border-bottom: 2px solid #fff;
+      text-decoration: none;
+      &.active {
+        font-weight: 600;
+        border-bottom: 2px solid #ccc;
+      }
+    }
+  }
+  .tab-content {
+    padding:20px;
+    background-color: #fff;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+  >ul {
+    margin-bottom: 0;
+  }
+}

@@ -2,17 +2,19 @@ import React from 'react'
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
 import { Route, Switch } from 'react-router-dom'
-import SimpleTabs from './simple-tabs'
-import RoutedTabs from './routed-tabs'
+import WithStateHooks from './with-state-hooks'
+import RoutedTabsDynamic from './routed-tabs/dynamic'
 import WithReactTabs from './with-react-tabs'
+
+import './style.scss'
 
 export default function ReactTabs(props) {
   const parentPath = props.match.path;
 
   const tabsData = [
     {
-      name: "Simple Tabs",
-      path: parentPath+"/simple-tabs",
+      name: "With State Hooks",
+      path: parentPath+"/with-state-hooks",
       defaultTab: true
     },
     {
@@ -26,18 +28,18 @@ export default function ReactTabs(props) {
   ]
 
   return (
-    <div>
+    <div className="react-tabs">
       <Header postUrl="https://www.devaradise.com/react-tabs-tutorial"/>
-      <div className="page-container container text-center">
-        <div className="page-header">
+      <div className="page-container container">
+        <div className="page-header text-center">
           <h1 className="page-title">React - Tabs Examples<br/> with 3 Ways to Implement</h1>
           <p className="sub-title">by <a href="https://www.devaradise.com/about-syakir">Syakir Rahman</a></p>
         </div>
         <div className="page-content mini-container">
           <Tabs data={tabsData} parentPath={parentPath}></Tabs>
           <Switch>
-            <Route component={SimpleTabs} exact path={[parentPath, parentPath+"/simple-tabs"]}/>
-            <Route component={RoutedTabs} path={[parentPath+"/routed-tabs"]}/>
+            <Route component={WithStateHooks} exact path={[parentPath, parentPath+"/with-state-hooks"]}/>
+            <Route component={RoutedTabsDynamic} path={[parentPath+"/routed-tabs"]}/>
             <Route component={WithReactTabs} path={[parentPath+"/with-react-tabs"]}/>
           </Switch>
         </div>
