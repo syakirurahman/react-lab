@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function WithStateHooks() {
+export default function WithStateHook() {
  
   const [currentTab, setCurrentTab] = useState('tab1');
   const tabList = [
@@ -39,21 +39,17 @@ export default function WithStateHooks() {
     }
   ];
   
-  const handleTab = (event, name) => {
-    event.preventDefault();
-    setCurrentTab(name);
-  };
-
   return (
     <div className="simple-tabs">
 
-      <h1>With State Hooks</h1>
+      <h1>With State Hook</h1>
       
       <div className="tabs">
         {
-          tabList.map((tab) => (
+          tabList.map((tab, i) => (
             <button 
-              onClick={(event) => handleTab(event, tab.name)} 
+              key={i}
+              onClick={() => setCurrentTab(tab.name)} 
               className={(tab.name === currentTab) ? 'active' : ''}>
                 {tab.label}
             </button>
@@ -62,9 +58,9 @@ export default function WithStateHooks() {
       </div>
       
       {
-        tabList.map((tab) => {
+        tabList.map((tab, i) => {
           if(tab.name === currentTab) {
-            return tab.content;
+            return <div key={i}>{tab.content}</div>;
           } else {
             return null;
           }

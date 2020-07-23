@@ -2,7 +2,7 @@ import React from 'react'
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
 import { Route, Switch } from 'react-router-dom'
-import WithStateHooks from './with-state-hooks'
+import WithStateHook from './with-state-hook'
 import RoutedTabsDynamic from './routed-tabs/dynamic'
 import WithReactTabs from './with-react-tabs'
 
@@ -13,8 +13,8 @@ export default function ReactTabs(props) {
 
   const tabsData = [
     {
-      name: "With State Hooks",
-      path: parentPath+"/with-state-hooks",
+      name: "With State Hook",
+      path: parentPath+"/with-state-hook",
       defaultTab: true
     },
     {
@@ -38,7 +38,7 @@ export default function ReactTabs(props) {
         <div className="page-content mini-container">
           <Tabs data={tabsData} parentPath={parentPath}></Tabs>
           <Switch>
-            <Route component={WithStateHooks} exact path={[parentPath, parentPath+"/with-state-hooks"]}/>
+            <Route component={WithStateHook} exact path={[parentPath, parentPath+"/with-state-hook"]}/>
             <Route component={RoutedTabsDynamic} path={[parentPath+"/routed-tabs"]}/>
             <Route component={WithReactTabs} path={[parentPath+"/with-react-tabs"]}/>
           </Switch>
