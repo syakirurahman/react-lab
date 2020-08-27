@@ -54,7 +54,7 @@ export default function Charts(props) {
 
   return (
     <div>
-      <Header postUrl="https://www.devaradise.com/react-chart-graph-tutorial"/>
+      <Header postUrl="https://www.devaradise.com/best-react-chart-graph-libraries"/>
       <div className="page-container container text-center">
         <div className="page-header">
           <h1 className="page-title">React - Chart / Graph Examples<br/> with 7 libraries</h1>
