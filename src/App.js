@@ -1,12 +1,13 @@
 import React from 'react';
 import 'assets/scss/bootstrap/bootstrap-grid.scss';
 import 'assets/scss/default.scss';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import Home from 'pages/Home';
 import Datepickers from 'pages/Datepickers';
 import InfiniteScroll from 'pages/InfiniteScroll';
 import ReactTabs from 'pages/ReactTabs';
-
+import Charts from 'pages/Charts';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route component={ReactTabs} path="/react-tabs"/>
         <Route component={InfiniteScroll} path="/infinite-scroll"/>
         <Route component={Datepickers} path="/datepickers"/>
+        <Route component={Charts} path="/charts"/>
       </Router>
     </div>
   );

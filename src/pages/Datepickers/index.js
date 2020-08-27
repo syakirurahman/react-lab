@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
-import { Route, Switch } from 'react-router-dom'
 
 import ReactDatepicker from './react-datepicker'
 import ReactDayPicker from './react-day-picker'
@@ -14,10 +13,12 @@ export default function Datepickers(props) {
     {
       name: "react-datepicker",
       path: parentPath+"/react-datepicker",
+      component: ReactDatepicker,
       defaultTab: true
     },
     {
       name: "react-day-picker",
+      component: ReactDayPicker,
       path: parentPath+"/react-day-picker"
     }
   ]
@@ -33,10 +34,6 @@ export default function Datepickers(props) {
         </div>
         <div className="page-content mini-container">
           <Tabs data={tabsData} parentPath={parentPath}></Tabs>
-          <Switch>
-            <Route component={ReactDatepicker} exact path={[parentPath, parentPath+"/react-datepicker"]}/>
-            <Route component={ReactDayPicker} path={parentPath+"/react-day-picker"}/>
-          </Switch>
         </div>
       </div>
 

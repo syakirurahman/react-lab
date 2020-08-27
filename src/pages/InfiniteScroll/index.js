@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
-import { Route, Switch } from 'react-router-dom'
 import InfiniteScrollNoLibrary from './no-library'
 import InfiniteScrollerWithReactInfiniteScroller from './react-infinite-scroller'
 
@@ -15,11 +14,13 @@ export default function InfiniteScroll(props) {
     {
       name: "No library",
       path: parentPath+"/no-library",
+      component: InfiniteScrollNoLibrary,
       defaultTab: true
     },
     {
       name: "react-infinite-scroller",
-      path: parentPath+"/react-infinite-scroller"
+      path: parentPath+"/react-infinite-scroller",
+      component: InfiniteScrollerWithReactInfiniteScroller
     }
   ]
 
@@ -33,10 +34,6 @@ export default function InfiniteScroll(props) {
         </div>
         <div className="page-content mini-container">
           <Tabs data={tabsData} parentPath={parentPath}></Tabs>
-          <Switch>
-            <Route component={InfiniteScrollNoLibrary} exact path={[parentPath, parentPath+"/no-library"]}/>
-            <Route component={InfiniteScrollerWithReactInfiniteScroller} path={[parentPath+"/react-infinite-scroller"]}/>
-          </Switch>
         </div>
       </div>
 

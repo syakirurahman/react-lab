@@ -11,6 +11,16 @@ export default function Home() {
       <div className="container experiments">
         <div className="row">
 
+          {/* React Charts */}
+          <div className="col-md-4">
+            <div className="box experiment">
+              <div className="experiment-thumb">
+                <img src={require("assets/images/undraw_visual_data_b1wx.png")} alt="React Charts"/>
+              </div>
+              <h2 className="experiment-title"><Link to="/charts">React Chart Examples</Link></h2>
+            </div>
+          </div>
+
           {/* React Tabs */}
           <div className="col-md-4">
             <div className="box experiment">
