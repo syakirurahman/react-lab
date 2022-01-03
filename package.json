@@ -9,7 +9,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "apexcharts": "^3.20.0",
+    "apexcharts": "^3.24.0",
     "axios": "^0.21.2",
     "chart.js": "^2.9.4",
     "highcharts": "^9.0.0",
